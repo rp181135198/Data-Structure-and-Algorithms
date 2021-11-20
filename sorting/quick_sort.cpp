@@ -1,39 +1,34 @@
 #include <iostream>
 using namespace std;
 
-int partition(int arr[], int l, int h){
-    int pivot = arr[l];
-    int i = l;
-    int j = h;
-    while (i < j)
+void quickSort(int arr[], int left, int right) {
+    int i = left;
+    int j = right;
+    int pivot = arr[(left+right)/2];
+    
+    // Partition
+    while (i <= j)
     {
-        do
-        {
+        while (arr[i] < pivot)
             i++;
-        } while (arr[i] <= pivot);
-        do
-        {
+        while(arr[j] > pivot)
             j--;
-        } while (arr[j] > pivot);
-        if(i < j) {
+        if(i <= j) {
             swap(arr[i], arr[j]);
+            i++;
+            j--;
         }
     }
-    swap(arr[l], arr[j]);
-    return j;
-}
-
-void quickSortHelper(int arr[], int l, int h) {
-    if(l < h) {
-        int j = partition(arr, l, h);
-        quickSortHelper(arr, l, j);
-        quickSortHelper(arr, j+1, h);
-    }
+    
+    // Recursion
+    if(left < j)
+        quickSort(arr, left, j);
+    if(i < right)
+        quickSort(arr, i, right);
 }
 
 void quickSort(int arr[], int size) {
-    arr[size] = INT32_MAX; // Not safe
-    quickSortHelper(arr, 0, size);
+    quickSort(arr, 0, size-1);
 }
 
 void display(int arr[], int size) {
