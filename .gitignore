@@ -33,7 +33,4 @@
 
 # Output Folder
 output
-.vscode
-
-# File without extension (for linux)
-!*.*
+.vscode/
