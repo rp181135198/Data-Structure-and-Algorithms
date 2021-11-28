@@ -7,7 +7,7 @@ bool isPrime(int a)
 {
     if (a <= 1)
         return false;
-    if (a == 2)
+    if (a == 2 || a == 3)
         return true;
     for (int j = 2; j <= sqrt(a); j++)
     {
