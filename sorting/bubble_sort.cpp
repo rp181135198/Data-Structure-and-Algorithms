@@ -20,7 +20,7 @@ void display(int arr[], int size) {
 
 int main()
 {
-    int a[5] = {5,3,4,9,2};
+    int a[5] = {5,3,2,9,4};
     cout<<"Before sorting: ";
     display(a, 5);
     bubbleSort(a, 5);

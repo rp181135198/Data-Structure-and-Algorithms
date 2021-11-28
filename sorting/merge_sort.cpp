@@ -56,7 +56,7 @@ void display(int arr[], int size) {
 
 int main()
 {
-    int arr[5] = {5,3,4,9,2};
+    int arr[5] = {5,3,2,9,4};
     cout<<"Before sorting: ";
     display(arr, 5);
     mergeSort(arr, 5);
