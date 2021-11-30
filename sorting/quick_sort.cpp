@@ -1,5 +1,8 @@
 #include <iostream>
+
 using namespace std;
+
+void display(int arr[], int size);
 
 void quickSort(int arr[], int left, int right) {
     int i = left;

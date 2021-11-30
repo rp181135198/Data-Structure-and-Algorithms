@@ -2,6 +2,8 @@
 
 using namespace std;
 
+void display(int arr[], int size);
+
 void merge(int arr[], int first, int mid, int last) {
     int subArr1 = mid - first + 1;
     int subArr2 = last - mid;

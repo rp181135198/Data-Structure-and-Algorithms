@@ -1,5 +1,8 @@
 #include <bits/stdc++.h>
+
 using namespace std;
+
+void display(int arr[], int size);
 
 void insertionSort(int arr[], int size) {
     for(int i=1; i<size; i++) {

@@ -1,5 +1,8 @@
 #include <bits/stdc++.h>
+
 using namespace std;
+
+void display(int arr[], int size);
 
 void bubbleSort(int arr[], int size) {
     for(int i=0; i<size; i++) {
